@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborations Network Graph</title>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="my_dataviz">
+        <div id="buttons">
+            <label for="search">Search: </label>
+            <input type="text" id="search" />
+            <button onclick="searchNodes()">Search</button>
+            <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+            <button onmouseover="displaySchoolColors()" onmouseout="hideSchoolColors()">Display School Colors</button>
+            <button onmouseover="displayRules()" onmouseout="unDisplayRules()">Methodology</button>
+            <button onclick="displayExternalCollaboration()">External Collaborations</button>
+            <button><a href="index.html">Back</a></button>
+           
+        </div>
+       
+    </div>
+    <div id="school-legend" onmouseover="showLegend()" onmouseout="hideLegend()"></div>
+    <div id="rules-legend" onmouseover="showRules()" onmouseout="hideRules()"></div>
+    <!-- <div id="contribution" style="display:none;" onclick="searchNodes()">
+        The total number of collaboration is: 
+        <span id="myContri"></span>
+    </div> -->
+    
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+    <!-- <script src="main.js"></script> -->
+
+</body>
+</html>
