@@ -2,11 +2,12 @@ import numpy as np
 import pandas as pd
 import json
 import os
+from datetime import date
 
-os.chdir("//mhsdata.anu.edu.au/desktop$/u7579788/Desktop/Workspace/NetworkGraphWork/Graph/ProjectsCollaborations/backend/Data")
+td = date.today()
 
-df1 = pd.read_excel("projects_file_external.xlsx")
-df2 = pd.read_excel("projects_file_internal.xlsx")
+df1 = pd.read_excel(f"backend\Data\Investgator Final Data\Project File External {td}.xlsx")
+df2 = pd.read_excel(f"backend\Data\Investgator Final Data\Project File Internal {td}.xlsx")
 
 #Preprocessing
 df1 = df1[df1['Years_new']>2017]
@@ -227,7 +228,7 @@ d["nodes"] = nodes
 d["links"] = links
 
 
-with open("project_external_new1.json", "w") as outfile:
+with open("backend\Data\Json Files\Project External.json", "w") as outfile:
     json.dump(d, outfile)
 
 
