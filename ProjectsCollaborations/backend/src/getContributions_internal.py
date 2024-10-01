@@ -195,7 +195,7 @@ d["nodes"] = nodes
 d["links"] = links
 
 
-with open("backend\Data\Json Files\Project Internal.json", "w") as outfile:
+with open("backend\Data\Json_Files\Project_Internal.json", "w") as outfile:
     json.dump(d, outfile)
 
 
